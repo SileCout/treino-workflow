@@ -1,0 +1,15 @@
+
+#sobre {
+    background-color: #f3f0ff;
+    padding: 20px;
+    margin-top: 20px;
+    border-radius: 8px;
+}
+
+#sobre h2 {
+    color: #6030a0;
+}
+
+#sobre p {
+    line-height: 1.6;
+}
