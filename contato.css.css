@@ -1,0 +1,112 @@
+/* ===== ESTILO DA SEÇÃO "PREENCHA SEUS DADOS" ===== */
+
+body {
+  margin: 0;
+}
+
+.dados {
+  padding: 80px 20px;
+  font-family: "Segoe UI", Roboto, Arial, sans-serif;
+  background: #f4f6fb;
+  color: #1f2937;
+}
+.dados *, .dados *::before, .dados *::after { box-sizing: border-box; }
+
+.dados__container {
+  max-width: 480px;
+  margin: 0 auto;
+  background: #fff;
+  padding: 40px 32px;
+  border-radius: 16px;
+  box-shadow: 0 10px 30px rgba(31, 41, 55, 0.08);
+}
+
+/* Título e subtítulo */
+.dados__titulo {
+  margin: 0 0 8px;
+  font-size: 1.8rem;
+  text-align: center;
+  color: #111827;
+}
+.dados__titulo::after {
+  content: "";
+  display: block;
+  width: 56px;
+  height: 4px;
+  margin: 12px auto 0;
+  background: #ee0707;
+  border-radius: 2px;
+}
+.dados__subtitulo {
+  margin: 16px 0 28px;
+  text-align: center;
+  color: #6b7280;
+}
+
+/* Formulário e campos */
+.dados__form { display: flex; flex-direction: column; gap: 20px; }
+
+.dados__campo { display: flex; flex-direction: column; gap: 6px; }
+
+.dados__campo label {
+  font-size: .85rem;
+  font-weight: 600;
+  color: #374151;
+}
+.dados__campo input {
+  padding: 12px 14px;
+  font-size: 1rem;
+  border: 1.5px solid #fd0c20;
+  border-radius: 10px;
+  background: #f9fafb;
+  transition: border-color .2s ease, box-shadow .2s ease, background .2s ease;
+}
+.dados__campo input:focus {
+  outline: none;
+  background: #fff;
+  border-color: #4f46e5;
+  box-shadow: 0 0 0 4px rgba(79, 70, 229, 0.15);
+}
+
+/* Estados de validação (aplicados pelo JavaScript) */
+.dados__campo.erro input { border-color: #dc2626; background: #fef2f2; }
+.dados__campo.ok input { border-color: #16a34a; }
+
+.dados__erro {
+  min-height: 1em;
+  font-size: .8rem;
+  color: #dc2626;
+}
+
+/* Botão */
+.dados__botao {
+  padding: 14px;
+  font-size: 1rem;
+  font-weight: 600;
+  color: #fff;
+  background: #4f46e5;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background .2s ease, transform .1s ease;
+}
+.dados__botao:hover { background: #4338ca; }
+.dados__botao:active { transform: scale(0.98); }
+
+/* Mensagem de sucesso */
+.dados__sucesso {
+  display: none;
+  padding: 14px;
+  text-align: center;
+  font-weight: 600;
+  color: #166534;
+  background: #dcfce7;
+  border-radius: 10px;
+}
+.dados__sucesso.visivel { display: block; }
+
+/* Celular */
+@media (max-width: 480px) {
+  .dados { padding: 40px 16px; }
+  .dados__container { padding: 28px 20px; }
+}
