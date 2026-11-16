@@ -13,3 +13,81 @@
 #sobre p {
     line-height: 1.6;
 }
+
+html {
+    scroll-behavior: smooth;
+}
+
+.cabecalho {
+    position: sticky;
+    top: 0;
+    z-index: 1;
+}
+
+.menu-navegacao {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 12px;
+    padding: 12px;
+    background-color: #3d236f;
+}
+
+.menu-navegacao a {
+    padding: 10px 16px;
+    border-radius: 6px;
+    color: #ffffff;
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.menu-navegacao a:hover,
+.menu-navegacao a:focus-visible {
+    background-color: #6030a0;
+}
+
+.rodape {
+    margin-top: 32px;
+    padding: 24px 16px;
+    background-color: #25183d;
+    color: #ffffff;
+    text-align: center;
+}
+
+.rodape p {
+    margin: 8px 0;
+}
+
+.rodape__titulo {
+    font-size: 1.2rem;
+    font-weight: 700;
+}
+
+.rodape a {
+    color: #e0d4ff;
+}
+
+.rodape__creditos {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 8px;
+}
+
+.rodape__ano {
+    margin-top: 20px;
+    font-size: 0.9rem;
+}
+
+@media (max-width: 480px) {
+    .menu-navegacao {
+        flex-direction: column;
+        align-items: stretch;
+        text-align: center;
+    }
+
+    .rodape__creditos {
+        flex-direction: column;
+        gap: 10px;
+    }
+}
